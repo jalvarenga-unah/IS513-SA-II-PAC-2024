@@ -1,11 +1,27 @@
 class CuentaAhorro {
   //propiedades
-  final int numeroCuenta;
+  late final int numeroCuenta;
   double _saldo = 0;
-  final String propietario;
+  late final String propietario;
 
   //Constructor
   CuentaAhorro({required this.numeroCuenta, required this.propietario});
+
+  //constructores con nombre
+  CuentaAhorro.cuenta({
+    required this.numeroCuenta,
+  });
+
+  CuentaAhorro.propietario({
+    required this.propietario,
+  });
+
+  //constructor factory
+  //permite retoronar una instancia nueva
+  factory CuentaAhorro.fromJson(Map map) {
+    return CuentaAhorro(
+        propietario: map['propietario'], numeroCuenta: map['numeroCuenta']);
+  }
 
   //comportamientos (metodos)
 
