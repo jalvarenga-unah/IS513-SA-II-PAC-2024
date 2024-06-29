@@ -10,9 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //const, transmite la inmutabildiad a sus hijos
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData(),
+      home: const HomePage(
+        contador: 20,
+        // titulo: 'Mi super app',
+      ),
     );
   }
 }

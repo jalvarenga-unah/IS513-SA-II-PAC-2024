@@ -1,9 +1,30 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({
+    super.key,
+    required this.contador,
+    this.titulo = '',
+  });
 
-  int contador = 0;
+  final int contador;
+  final String titulo;
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int nuevoContador = 0;
+
+  //solo se ejecuta 1 vez
+  @override
+  void initState() {
+    // ejecuta la funcionalidad normal o habitual desde el padre
+    super.initState();
+
+    nuevoContador = widget.contador;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +38,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.indigo,
         centerTitle: false,
         title: Text(
-          'Mi primer App',
+          widget.titulo != '' ? widget.titulo : 'Mi primer App',
           style: estiloTexto,
         ),
       ),
@@ -37,7 +58,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Text(
-                '${contador}',
+                '${nuevoContador}',
                 style: estiloTexto.copyWith(
                   fontSize: 30,
                   fontWeight: FontWeight.w400,
@@ -54,9 +75,9 @@ class HomePage extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed: () {
-              contador--;
+              nuevoContador--;
 
-              // setState(() {});
+              setState(() {});
             },
             // backgroundColor: Colors.amber,
             child: const Icon(
@@ -69,9 +90,9 @@ class HomePage extends StatelessWidget {
           ),
           FloatingActionButton(
             onPressed: () {
-              contador++;
+              nuevoContador++;
 
-              // setState(() {});
+              setState(() {});
             },
             // backgroundColor: Colors.amber,
             child: const Icon(
