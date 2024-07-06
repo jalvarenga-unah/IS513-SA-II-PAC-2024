@@ -1,4 +1,3 @@
-import 'package:componentes/listas_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -34,6 +33,13 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed('imagenes');
               },
               child: const Text('Imagenes'),
+            ),
+            const SizedBox(height: 20),
+            OutlinedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('inpusts');
+              },
+              child: const Text('Inputs'),
             ),
             const SizedBox(height: 20),
             TextButton(
