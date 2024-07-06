@@ -1,5 +1,6 @@
 import 'package:componentes/home_page.dart';
 import 'package:componentes/images_page.dart';
+import 'package:componentes/inputs_page.dart';
 import 'package:componentes/listas_page.dart';
 import 'package:componentes/menus_page.dart';
 import 'package:componentes/peticiones_page.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         'imagenes': (context) => const ImagenesPage(),
         'menus': (context) => const MenusPage(),
         'peticiones': (context) => const PeticionesPage(),
-        // 'inputs': (context) => const InputsPage(),
+        'inputs': (context) => InputsPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
         //* Generación de rutas dinamicas en funcion del nombre en las propiedes de la navegación

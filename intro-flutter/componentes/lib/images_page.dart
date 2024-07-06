@@ -12,7 +12,7 @@ class ImagenesPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Imagenes locales
+            //* Imagenes locales
 
             // Image(
             //   image: AssetImage('assets/images/logo-is.jpg'),
@@ -24,7 +24,7 @@ class ImagenesPage extends StatelessWidget {
               width: 300,
             ),
 
-            // Imagenes descargadas
+            //* Imagenes descargadas o por URL
             const SizedBox(
               height: 150,
               width: 150,
@@ -42,6 +42,7 @@ class ImagenesPage extends StatelessWidget {
             Image.network(
               'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
               height: 200,
+              fit: BoxFit.cover,
             ),
             const Image(
               image: NetworkImage(
