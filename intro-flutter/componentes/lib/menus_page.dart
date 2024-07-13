@@ -9,6 +9,7 @@ class MenusPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Menus'),
       ),
+      // drawer: Drawer(),
     );
   }
 }
