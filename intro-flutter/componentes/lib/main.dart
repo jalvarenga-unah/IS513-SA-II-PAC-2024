@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         'listas': (context) => const ListasPage(),
         'imagenes': (context) => const ImagenesPage(),
         'menus': (context) => const MenusPage(),
-        'peticiones': (context) => const PeticionesPage(),
+        'peticiones': (context) => PeticionesPage(),
         'inputs': (context) => InputsPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
