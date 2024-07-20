@@ -6,23 +6,22 @@ class ProductosProvider {
   Future<List<Producto>> getProductos() async {
     // const url = 'https://fakestoreapi.com/products';
 
-    print('iniciando la petición');
-
-    print('haciendo mas cosas');
     final url = Uri.https('fakestoreapi.com', 'products');
+
     // Uri.parse(url)
-    http.get(url).then((respuesta) {
-      print('quiero hacer otras cosas');
 
-      json.decode(respuesta.body);
+    final respuesta = await http.get(url);
 
-      print(respuesta.body);
-    }).catchError((error) {
-      print(error);
-    });
+    final data = json.decode(respuesta.body); //respuesta.body = String
 
-    print('finalizando la petición');
+    final List<Producto> nuevaLista = [];
 
-    return <Producto>[];
+    for (var item in data) {
+      final producto = Producto.fromJson(item);
+      nuevaLista.add(producto);
+    }
+
+    //virtualmente nuca se ejecuta
+    return nuevaLista;
   }
 }

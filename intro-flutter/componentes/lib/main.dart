@@ -1,3 +1,4 @@
+import 'package:componentes/estados_page.dart';
 import 'package:componentes/home_page.dart';
 import 'package:componentes/images_page.dart';
 import 'package:componentes/inputs_page.dart';
@@ -19,12 +20,13 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       initialRoute: 'home', //esta es la ruta principal
       routes: {
-        'home': (context) => const HomePage(),
+        'home': (context) => HomePage(),
         'listas': (context) => const ListasPage(),
         'imagenes': (context) => const ImagenesPage(),
         'menus': (context) => const MenusPage(),
         'peticiones': (context) => PeticionesPage(),
         'inputs': (context) => InputsPage(),
+        'estados': (context) => EstadosPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
         //* Generación de rutas dinamicas en funcion del nombre en las propiedes de la navegación

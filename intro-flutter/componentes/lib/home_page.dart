@@ -1,9 +1,14 @@
+import 'package:componentes/controllers/contador_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({
+  HomePage({
     super.key,
   });
+
+  // Creando un Singleton
+  final controller = Get.put(ContadorController());
 
   @override
   Widget build(BuildContext context) {
@@ -146,6 +151,13 @@ class HomePage extends StatelessWidget {
               onPressed: () => Navigator.of(context).pushNamed('peticiones'),
               icon: const Icon(Icons.http),
             ),
+            const SizedBox(height: 20),
+            Obx(
+              () => OutlinedButton(
+                onPressed: () => Navigator.of(context).pushNamed('estados'),
+                child: Text('Estados: ${controller.contador}  '),
+              ),
+            )
           ],
         ),
       ),
