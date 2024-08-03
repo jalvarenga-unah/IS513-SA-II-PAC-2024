@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "279309055875",
+    "project_id": "servicios-firestore-sa",
+    "storage_bucket": "servicios-firestore-sa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279309055875:android:873cd9bd073d0ca256e8b6",
+        "android_client_info": {
+          "package_name": "hn.edu.unah.servicios_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQlTnf3qgpc5l3Av9LTMGHi4tHSfNRQv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
